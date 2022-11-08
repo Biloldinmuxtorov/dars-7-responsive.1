@@ -1,0 +1,38 @@
+
+*{
+    box-sizing: border-box;
+}
+
+@mixin container {
+    max-width: 1232px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@mixin center ($val) {
+    display: flex;
+    justify-content: $val;
+    align-items: center;
+}
+
+@mixin fontS ($color:black, $size: 1rem){
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.flex{
+    @include container();
+    @include center(space-around);
+
+    .box{
+        @include center(center);
+        height: 200px;
+        background-color: crimson;
+        color: white;
+        width: 40%;
+    }
+}
